@@ -1,0 +1,128 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #454b55;
+}
+
+
+.qd2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 95vh;
+}
+
+#quadrado {
+
+    background-color: #0e0e0ed0;
+    padding: 140px;
+    text-align: center;
+    box-shadow: 3px 1px 9px rgb(0, 0, 0);
+    width: 100%;
+    margin: 0;
+}
+
+#labelRange {
+    font-size: 18px;
+    color: white;
+
+}
+
+#num {
+    padding: 3px;
+}
+
+#btn {
+    margin-top: 34px;
+    color: white;
+    cursor: pointer;
+}
+
+#btn::selection {
+    display: none;
+}
+
+#btn:hover {
+    filter: drop-shadow(1px 1px 1px rgba(255, 255, 255, 0.589));
+}
+
+#res {
+    color: rgb(0, 0, 0);
+    line-height: 1.7;
+    margin-top: 26px;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    width: 32%;
+    padding: 10px;
+    border: 1px rgb(0, 0, 0) solid;
+    box-shadow: inset 1px 1px 10px rgba(121, 121, 128, 0.856); 
+    border-radius: 9px;
+    text-align: start;
+}
+
+footer {
+    background-color: #0e0e0ed7;
+    color: white;
+    padding: 15px;
+}
+
+
+#senhaExibir {
+    color: white;
+    margin-top: 12px;
+    margin-bottom: 15px;
+    background-color: #dbdbdb;
+    width: 2%;
+    padding: 10px;
+    border-radius: 7px;
+
+}
+
+/* Estilo da faixa do range no Chrome */
+#inputSenha {
+    -webkit-appearance: none; /* Remove a aparência padrão no Chrome */
+    width: 50%;  /* Largura do controle */
+    margin: 10px 0;  /* Margem superior e inferior */
+    background: linear-gradient(to right, #9c4949, rgb(185, 185, 100), #8BC34A);  /* fraca - mediana - forte */
+    height: 8px;  /* Altura da faixa */
+    border-radius: 5px;  /* Bordas arredondadas */
+    cursor: pointer;  /* Cursor ao passar o mouse */
+
+}
+
+/* Estilo do thumb no Chrome */
+#inputSenha::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove a aparência padrão no Chrome */
+    width: 13px; /* Largura do thumb */
+    height: 25px; /* Altura do thumb */
+    background: #4caf4f; /* Cor do thumb */
+    border-radius: 8%; /* Bordas arredondadas do thumb */
+    cursor: pointer; /* Cursor ao passar o mouse */
+}
+
+.centralizar {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.checkbox {
+    margin-top: 30px;
+    color: white;
+}
+
+#Simbolos {
+    margin: 2px;
+}
+
+#letrasMaiu {
+    margin: 2px;
+}
+
+#Numeros {
+    margin: 2px;
+}
