@@ -59,7 +59,7 @@ body {
     width: 32%;
     padding: 10px;
     border: 1px rgb(0, 0, 0) solid;
-    box-shadow: inset 1px 1px 10px rgba(121, 121, 128, 0.856); 
+    box-shadow: inset 1px 1px 10px rgba(121, 121, 128, 0.856);
     border-radius: 9px;
     text-align: start;
 }
@@ -84,24 +84,37 @@ footer {
 
 /* Estilo da faixa do range no Chrome */
 #inputSenha {
-    -webkit-appearance: none; /* Remove a aparência padrão no Chrome */
-    width: 50%;  /* Largura do controle */
-    margin: 10px 0;  /* Margem superior e inferior */
-    background: linear-gradient(to right, #9c4949, rgb(185, 185, 100), #8BC34A);  /* fraca - mediana - forte */
-    height: 8px;  /* Altura da faixa */
-    border-radius: 5px;  /* Bordas arredondadas */
-    cursor: pointer;  /* Cursor ao passar o mouse */
+    -webkit-appearance: none;
+    /* Remove a aparência padrão no Chrome */
+    width: 50%;
+    /* Largura do controle */
+    margin: 10px 0;
+    /* Margem superior e inferior */
+    background: linear-gradient(to right, #9c4949, rgb(185, 185, 100), #8BC34A);
+    /* fraca - mediana - forte */
+    height: 8px;
+    /* Altura da faixa */
+    border-radius: 5px;
+    /* Bordas arredondadas */
+    cursor: pointer;
+    /* Cursor ao passar o mouse */
 
 }
 
 /* Estilo do thumb no Chrome */
 #inputSenha::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Remove a aparência padrão no Chrome */
-    width: 13px; /* Largura do thumb */
-    height: 25px; /* Altura do thumb */
-    background: #4caf4f; /* Cor do thumb */
-    border-radius: 8%; /* Bordas arredondadas do thumb */
-    cursor: pointer; /* Cursor ao passar o mouse */
+    -webkit-appearance: none;
+    /* Remove a aparência padrão no Chrome */
+    width: 13px;
+    /* Largura do thumb */
+    height: 25px;
+    /* Altura do thumb */
+    background: #4caf4f;
+    /* Cor do thumb */
+    border-radius: 8%;
+    /* Bordas arredondadas do thumb */
+    cursor: pointer;
+    /* Cursor ao passar o mouse */
 }
 
 .centralizar {
@@ -117,12 +130,75 @@ footer {
 
 #Simbolos {
     margin: 2px;
+    margin-left: 15px;
 }
 
 #letrasMaiu {
     margin: 2px;
+    margin-left: 15px;
 }
 
 #Numeros {
     margin: 2px;
+}
+
+#NumerosDiv {
+    margin: 6px;
+
+}
+
+input[type=checkbox]+label {
+    display: block;
+    margin: 0em;
+    cursor: pointer;
+    padding: 0.1em;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+input[type=checkbox]+label:before {
+    content: "\2714";
+    border: 0.13em solid #000;
+    border-radius: 0.0em;
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    padding-left: 0.2em;
+    padding-bottom: 0.3em;
+    margin-right: 0.4em;
+    color: transparent;
+    transition: .6s;
+}
+
+input[type=checkbox]+label:active:before {
+    transform: scale(0);
+}
+
+input[type=checkbox]:checked+label:before {
+    background-color: #389e38;
+    border-color: black;
+    color: #000000;
+}
+
+input[type=checkbox]:disabled+label:before {
+    transform: scale(1);
+    border-color: #aaa;
+}
+
+input[type=checkbox]:checked:disabled+label:before {
+    transform: scale(1);
+    background-color: #bfb;
+    border-color: #bfb;
+}
+
+.d-flex {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.checkbox {
+    margin-right: 7px;
 }

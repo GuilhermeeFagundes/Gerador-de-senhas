@@ -24,14 +24,20 @@
       <i style="font-size:24px" class="fa" id="btn">&#xf021;</i>
       <div class="checkbox">
 
-        <input type="checkbox" name="" id="Numeros" checked>
-        <label for="Numeros">Números</label>
-
-        <input type="checkbox" name="" id="letrasMaiu" checked>
-        <label for="letrasMaiu">Maiúsculas</label>
-
-        <input type="checkbox" name="" id="Simbolos" checked>
-        <label for="Simbolos">Simbolos</label>
+        <div class="d-flex">
+          <div class="checkbox">
+            <input type="checkbox" name="" id="Numeros" checked>
+            <label for="Numeros">Números</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="" id="letrasMaiu" checked>
+            <label for="letrasMaiu">Maiúsculas</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="" id="Simbolos" checked>
+            <label for="Simbolos">Simbolos</label>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -93,7 +99,7 @@
         senha += `${caracteresPo[caracteresALE]}`
 
       }
-      console.log(senha)
+
       div.innerText = senha
     }
 
