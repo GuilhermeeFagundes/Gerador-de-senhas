@@ -4,8 +4,10 @@
     margin: 0;
 }
 
+
 body {
     background-color: #454b55;
+    margin: 0;
 }
 
 
@@ -13,6 +15,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
     min-height: 95vh;
 }
 
@@ -22,9 +25,26 @@ body {
     padding: 140px;
     text-align: center;
     box-shadow: 3px 1px 9px rgb(0, 0, 0);
-    width: 100%;
+    width: 100vw;
     margin: 0;
+
 }
+
+footer {
+    position: absolute;
+    width: 100vw;
+    background-color: #0e0e0ed7;
+    color: white;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    bottom: 0px;
+}
+
+footer p {
+    margin-left: 15px;
+    font-size: 15px;
+}
+
 
 #labelRange {
     font-size: 18px;
@@ -62,13 +82,10 @@ body {
     box-shadow: inset 1px 1px 10px rgba(121, 121, 128, 0.856);
     border-radius: 9px;
     text-align: start;
+    word-wrap: break-word; /*quebra linha quando chegar ao fim da div*/
 }
 
-footer {
-    background-color: #0e0e0ed7;
-    color: white;
-    padding: 15px;
-}
+
 
 
 #senhaExibir {
@@ -77,8 +94,8 @@ footer {
     margin-bottom: 15px;
     background-color: #dbdbdb;
     width: 2%;
-    padding: 10px;
-    border-radius: 7px;
+    padding: 7px;
+    border-radius: 8px;
 
 }
 
@@ -166,6 +183,7 @@ input[type=checkbox]+label:before {
     width: 1em;
     height: 1em;
     padding-left: 0.2em;
+    vertical-align: middle;
     padding-bottom: 0.3em;
     margin-right: 0.4em;
     color: transparent;
@@ -200,5 +218,5 @@ input[type=checkbox]:checked:disabled+label:before {
 }
 
 .checkbox {
-    margin-right: 7px;
+    margin-right: 12px;
 }
