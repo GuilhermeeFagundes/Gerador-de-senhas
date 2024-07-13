@@ -64,6 +64,7 @@ footer p {
     margin-top: 34px;
     color: white;
     cursor: pointer;
+    margin-right: 15px;
 }
 
 #btn::selection {

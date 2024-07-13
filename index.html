@@ -14,7 +14,9 @@
     <div id="quadrado">
       <label for="inputSenha" id="labelRange">Defina a quantidade de caracteres da sua senha: </label>
       <div class="centralizar">
-        <div id="senhaExibir"><p id="senhaExibirP"></p></div>
+        <div id="senhaExibir">
+          <p id="senhaExibirP"></p>
+        </div>
       </div>
       <input type="range" name="" id="inputSenha" min="2" max="50" value="8"> <br>
       <!-- <button id="btn">Gerar</button> -->
@@ -22,16 +24,21 @@
         <div id="res"></div>
       </div>
       <i style="font-size:24px" class="fa" id="btn">&#xf021;</i>
+      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-copy"
+        viewBox="0 0 16 16" onclick="copyPassword()" id="btn">
+        <path fill-rule="evenodd"
+          d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+      </svg>
       <div class="checkbox">
 
         <div class="d-flex">
           <div class="checkbox">
-            <input type="checkbox" name="" id="Numeros" checked>
-            <label for="Numeros">Números</label>
-          </div>
-          <div class="checkbox">
             <input type="checkbox" name="" id="letrasMaiu" checked>
             <label for="letrasMaiu">Maiúsculas</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="" id="Numeros" checked>
+            <label for="Numeros">Números</label>
           </div>
           <div class="checkbox">
             <input type="checkbox" name="" id="Simbolos" checked>
@@ -60,6 +67,7 @@
     let checkerboxNum = document.getElementById('Numeros')
     let checkerboxMaiu = document.getElementById('letrasMaiu')
     let checkerboxSimb = document.getElementById('Simbolos')
+    let senha = ''
 
     function gerarSenha() {
       // let quantidadeDIG = Math.random()                                   
@@ -87,7 +95,7 @@
       }
       console.log(caracteresPo)
 
-      let senha = ''
+      senha = ''
       console.log(caracteresPo)
 
       for (let i = 0; i < quantidadeDIG; i++) {
@@ -106,24 +114,9 @@
 
 
     function copyPassword() {
-      let senha = div.innerText
-      console.log(senha)
-
-      // Cria um elemento de texto temporário
-      let tempInput = document.createElement("textarea")
-      tempInput.value = senha
-      document.body.appendChild(tempInput)
-
-      // Seleciona o texto do elemento temporário
-      tempInput.select()
-      tempInput.setSelectionRange(0, 99999) // Para dispositivos móveis
-
-      // Copia o texto selecionado para a área de transferência
-      document.execCommand("copy")
-
-      // Remove o elemento temporário
-      document.body.removeChild(tempInput)
+      navigator.clipboard.writeText(senha)
     }
+
 
     gerarSenha()
     btn.addEventListener('click', gerarSenha)
