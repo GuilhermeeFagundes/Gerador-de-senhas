@@ -14,7 +14,7 @@
     <div id="quadrado">
       <label for="inputSenha" id="labelRange">Defina a quantidade de caracteres da sua senha: </label>
       <div class="centralizar">
-        <div id="senhaExibir"></div>
+        <div id="senhaExibir"><p id="senhaExibirP"></p></div>
       </div>
       <input type="range" name="" id="inputSenha" min="2" max="50" value="8"> <br>
       <!-- <button id="btn">Gerar</button> -->
@@ -55,6 +55,7 @@
     let btn = document.getElementById('btn')
     let div = document.getElementById('res')
     let div2 = document.getElementById('senhaExibir')
+    let senhaP = document.getElementById('senhaExibirP')
     let inputRange = document.getElementById('inputSenha')
     let checkerboxNum = document.getElementById('Numeros')
     let checkerboxMaiu = document.getElementById('letrasMaiu')
@@ -67,7 +68,7 @@
       // console.log(`A quantidade de letras da senha é: ${quantidadeDIG}`)
 
       let quantidadeDIG = document.getElementById('inputSenha').value
-      div2.innerHTML = quantidadeDIG
+      senhaP.innerHTML = quantidadeDIG
       let caracteresPo = `abcdefghijklmnopqrstuvwxyz`
       let caracteresMai = `ABCDEFGHIJKLMNOPQRSTUVWXYZ`
       let caracteresSimb = `!@#$%^&*()_+-=[]{}|;:'",.<>?/~`

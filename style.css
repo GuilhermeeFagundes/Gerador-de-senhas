@@ -5,9 +5,14 @@
 }
 
 
+html,
 body {
-    background-color: #454b55;
+    height: 100%;
     margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    background-color: #454b55;
 }
 
 
@@ -16,11 +21,10 @@ body {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: 95vh;
+    flex: 1;
 }
 
 #quadrado {
-
     background-color: #0e0e0ed0;
     padding: 140px;
     text-align: center;
@@ -31,7 +35,7 @@ body {
 }
 
 footer {
-    position: absolute;
+    margin-top: auto;
     width: 100vw;
     background-color: #0e0e0ed7;
     color: white;
@@ -82,7 +86,8 @@ footer p {
     box-shadow: inset 1px 1px 10px rgba(121, 121, 128, 0.856);
     border-radius: 9px;
     text-align: start;
-    word-wrap: break-word; /*quebra linha quando chegar ao fim da div*/
+    word-break: break-all;
+    /*quebra a linha quando não cabe no container*/
 }
 
 
@@ -92,14 +97,18 @@ footer p {
     color: white;
     margin-top: 12px;
     margin-bottom: 15px;
-    background-color: #dbdbdb;
+    background-color: #c2c1c1;
     width: 2%;
     padding: 7px;
-    border-radius: 8px;
+    border-radius: 10px;
+}
+
+#senhaExibirP {
+    width: 100%;
 
 }
 
-/* Estilo da faixa do range no Chrome */
+/* Estilo da faixa do range */
 #inputSenha {
     -webkit-appearance: none;
     /* Remove a aparência padrão no Chrome */
@@ -118,7 +127,7 @@ footer p {
 
 }
 
-/* Estilo do thumb no Chrome */
+/* Estilo do thumb */
 #inputSenha::-webkit-slider-thumb {
     -webkit-appearance: none;
     /* Remove a aparência padrão no Chrome */
@@ -219,4 +228,134 @@ input[type=checkbox]:checked:disabled+label:before {
 
 .checkbox {
     margin-right: 12px;
+}
+
+@media (max-width: 1550px) {
+    #senhaExibir {
+        color: white;
+        margin-top: 12px;
+        margin-bottom: 15px;
+        background-color: #c2c1c1;
+        width: 4%;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    #senhaExibirP {
+        width: 100%;
+
+    }
+}
+
+@media (max-width: 1110px) {
+
+
+
+
+    #res {
+        color: rgb(0, 0, 0);
+        line-height: 1.7;
+        margin-top: 26px;
+        margin-bottom: 15px;
+        background-color: #ffffff;
+        width: 60%;
+        padding: 10px;
+        border: 1px rgb(0, 0, 0) solid;
+        box-shadow: inset 1px 1px 10px rgba(121, 121, 128, 0.856);
+        border-radius: 9px;
+        text-align: start;
+        word-break: break-all;
+        /*quebra a linha quando não cabe no container*/
+    }
+
+}
+
+@media (max-width: 700px) {
+
+    #quadrado {
+        background-color: #0e0e0ed0;
+        padding: 140px;
+        text-align: center;
+        box-shadow: 3px 1px 9px rgb(0, 0, 0);
+        width: 100vw;
+        margin: 0;
+
+    }
+
+    #senhaExibir {
+        color: white;
+        margin-top: 12px;
+        margin-bottom: 15px;
+        background-color: #c2c1c1;
+        width: 7%;
+        padding: 12px;
+        border-radius: 10px;
+    }
+
+    #senhaExibirP {
+        width: 100%;
+
+    }
+
+    #res {
+        color: rgb(0, 0, 0);
+        line-height: 1.7;
+        margin-top: 26px;
+        margin-bottom: 15px;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 10px;
+        border: 1px rgb(0, 0, 0) solid;
+        box-shadow: inset 1px 1px 10px rgba(121, 121, 128, 0.856);
+        border-radius: 9px;
+        text-align: start;
+        word-break: break-all;
+        /*quebra a linha quando não cabe no container*/
+    }
+
+
+}
+
+@media (max-width: 550px) {
+
+
+    #quadrado {
+        background-color: #0e0e0ed0;
+        padding: 40px;
+        padding-top: 65px;
+        padding-bottom: 65px;
+        text-align: center;
+        box-shadow: 3px 1px 9px rgb(0, 0, 0);
+        width: 100%;
+        margin: 0;
+        max-width: 500px;
+
+    }
+
+    footer {
+        margin-top: auto;
+        width: 100vw;
+        background-color: #0e0e0ed7;
+        color: white;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        bottom: 0px;
+    }
+
+    #res {
+        color: rgb(0, 0, 0);
+        line-height: 1.7;
+        margin-top: 26px;
+        margin-bottom: 15px;
+        background-color: #ffffff;
+        width: 100%;
+        padding: 10px;
+        border: 1px rgb(0, 0, 0) solid;
+        box-shadow: inset 1px 1px 10px rgba(121, 121, 128, 0.856);
+        border-radius: 9px;
+        text-align: start;
+        word-break: break-all;
+        /*quebra a linha quando não cabe no container*/
+    }
+
 }

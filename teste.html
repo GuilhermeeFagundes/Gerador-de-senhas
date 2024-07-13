@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gerador de Senha</title>
+  <title>Gerador de Senhas</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -24,14 +24,20 @@
       <i style="font-size:24px" class="fa" id="btn">&#xf021;</i>
       <div class="checkbox">
 
-        <input type="checkbox" name="" id="Numeros" checked>
-        <label for="Numeros">Números</label>
-
-        <input type="checkbox" name="" id="letrasMaiu" checked>
-        <label for="letrasMaiu">Maiúsculas</label>
-
-        <input type="checkbox" name="" id="Simbolos" checked>
-        <label for="Simbolos">Simbolos</label>
+        <div class="d-flex">
+          <div class="checkbox">
+            <input type="checkbox" name="" id="Numeros" checked>
+            <label for="Numeros">Números</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="" id="letrasMaiu" checked>
+            <label for="letrasMaiu">Maiúsculas</label>
+          </div>
+          <div class="checkbox">
+            <input type="checkbox" name="" id="Simbolos" checked>
+            <label for="Simbolos">Simbolos</label>
+          </div>
+        </div>
       </div>
 
     </div>
@@ -39,11 +45,8 @@
   </div>
 
   <footer>
-    Guilherme Fagundes
+    <p><strong>Desenvolvido por: Guilherme Fagundes</strong></p>
   </footer>
-
-
-
 
   <script>
     let btn = document.getElementById('btn')
@@ -55,11 +58,6 @@
     let checkerboxSimb = document.getElementById('Simbolos')
 
     function gerarSenha() {
-      // let quantidadeDIG = Math.random()                                   
-      // quantidadeDIG = quantidadeDIG * 9 + 1 // para não gerar 0
-      // quantidadeDIG = Math.round(quantidadeDIG)                               (GERA A QUANTIDADE DE DIGITOS ALEATORIAMENTE.)
-      // console.log(`A quantidade de letras da senha é: ${quantidadeDIG}`)
-
       let quantidadeDIG = document.getElementById('inputSenha').value
       div2.innerHTML = quantidadeDIG
       let caracteresPo = `abcdefghijklmnopqrstuvwxyz`
@@ -67,18 +65,15 @@
       let caracteresSimb = `!@#$%^&*()_+-=[]{}|;:'",.<>?/~`
       let caracteresnums = `0123456789`
 
-
-      //Caso marcado --
       if (checkerboxNum.checked) {
-        caracteresPo += caracteresnums //adiciona números
+        caracteresPo += caracteresnums
       }
       if (checkerboxMaiu.checked) {
-        caracteresPo += caracteresMai //adiciona letras maiúsculas
+        caracteresPo += caracteresMai
       }
       if (checkerboxSimb.checked) {
-        caracteresPo += caracteresSimb //adiciona símbolos
+        caracteresPo += caracteresSimb
       }
-
       console.log(caracteresPo)
 
       let senha = ''
@@ -90,31 +85,27 @@
         caracteresALE = Math.round(caracteresALE)
         console.log(caracteresALE)
 
-
+        console.log(caracteresPo[caracteresALE])
         senha += `${caracteresPo[caracteresALE]}`
 
       }
-      div.innerHTML = senha
-    }
 
+      div.innerText = senha
+    }
 
     function copyPassword() {
       let senha = div.innerText
       console.log(senha)
 
-      // Cria um elemento de texto temporário
       let tempInput = document.createElement("textarea")
       tempInput.value = senha
       document.body.appendChild(tempInput)
 
-      // Seleciona o texto do elemento temporário
       tempInput.select()
-      tempInput.setSelectionRange(0, 99999) // Para dispositivos móveis
+      tempInput.setSelectionRange(0, 99999)
 
-      // Copia o texto selecionado para a área de transferência
       document.execCommand("copy")
 
-      // Remove o elemento temporário
       document.body.removeChild(tempInput)
     }
 
@@ -126,5 +117,4 @@
     checkerboxMaiu.addEventListener('change', gerarSenha)
   </script>
 </body>
-
 </html>
